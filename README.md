@@ -34,13 +34,13 @@
 
 $ y = xW + b $
 
-输入：x 是形状为 $ (N, D_{in}) $ 的输入矩阵，其中 (N) 是批量大小，$ (D_{in}) $ 是输入特征维度。
+输入：x 是形状为 $(N, D_{in})$ 的输入矩阵，其中 (N) 是批量大小，$(D_{in})$ 是输入特征维度。
 
-权重：W 是形状为 $ (D_{in}, D_{out}) $ 的权重矩阵。
+权重：W 是形状为 $(D_{in}, D_{out})$ 的权重矩阵。
 
-偏置：b 是形状为 $ (D_{out},) $ 的偏置向量。
+偏置：b 是形状为 $(D_{out},)$ 的偏置向量。
 
-输出：y 是形状为 $ (N, D_{out}) $ 的输出矩阵。
+输出：y 是形状为 $(N, D_{out})$ 的输出矩阵。
 
 ### 2.4 反向传播
 反向传播过程中，通过链式法则计算损失函数对每一层参数的梯度：
@@ -49,11 +49,11 @@ $ y = xW + b $
 
 权重梯度： $\frac{\partial L}{\partial W} = x^T \cdot grad_\text{out}$ 
 
-其中，$ grad_\text{output} $ 是损失对输出 y 的梯度，形状为 $ (N, D_{out}) $。
+其中，$grad_\text{output}$ 是损失对输出 y 的梯度，形状为 $(N, D_{out})$。
 
-偏置梯度： $ \frac{\partial L}{\partial b} = \sum_{i=1}^N grad_\text{out}[i] $
+偏置梯度： $\frac{\partial L}{\partial b} = \sum_{i=1}^N grad_\text{out}[i]$
 
-输入梯度： $ \frac{\partial L}{\partial x} = grad_\text{out} \cdot W^T $
+输入梯度： $\frac{\partial L}{\partial x} = grad_\text{out} \cdot W^T$
 
 ### 2.5 优化器
 - 使用随机梯度下降（SGD）。
