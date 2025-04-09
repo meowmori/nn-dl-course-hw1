@@ -49,7 +49,7 @@ $$y = xW + b$$
 
 权重梯度： $\frac{\partial L}{\partial W} = x^T \cdot grad_\text{out}$ 
 
-其中，$$grad_\text{output}$$ 是损失对输出 y 的梯度，形状为 $(N, D_{out})$。
+其中，$\grad_\text{output}$ 是损失对输出 y 的梯度，形状为 $(N, D_{out})$。
 
 偏置梯度： $\frac{\partial L}{\partial b} = \sum_{i=1}^N grad_\text{out}[i]$
 
