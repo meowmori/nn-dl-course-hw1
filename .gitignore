@@ -1,0 +1,6 @@
+.copilot_chat
+.backup
+.gitignore
+src/.data
+experiments/others
+report.ipynb
