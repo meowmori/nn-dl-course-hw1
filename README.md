@@ -32,7 +32,7 @@
 1. 数据首先通过全连接层（Linear），计算线性变换。
 2. 然后通过激活函数层（如 ReLU），引入非线性特性。
 
-$ y = xW + b $
+$$y = xW + b$$
 
 输入：x 是形状为 $(N, D_{in})$ 的输入矩阵，其中 (N) 是批量大小，$(D_{in})$ 是输入特征维度。
 
@@ -49,7 +49,7 @@ $ y = xW + b $
 
 权重梯度： $\frac{\partial L}{\partial W} = x^T \cdot grad_\text{out}$ 
 
-其中，$grad_\text{output}$ 是损失对输出 y 的梯度，形状为 $(N, D_{out})$。
+其中，$ grad_\text{output}$ 是损失对输出 y 的梯度，形状为 $(N, D_{out})$。
 
 偏置梯度： $\frac{\partial L}{\partial b} = \sum_{i=1}^N grad_\text{out}[i]$
 
