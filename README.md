@@ -1,1 +1,1 @@
-# nn-ml-course-hw1
+# nn-dl-course-hw1
