@@ -100,6 +100,7 @@ class Trainer:
 
     def _compute_loss(self, scores, y):
         num_train = scores.shape[0]
+        # 交叉熵损失
         loss = -np.sum(np.log(scores[range(num_train), y])) / num_train
 
         # L2 正则化
@@ -109,7 +110,7 @@ class Trainer:
                 reg_loss += 0.5 * self.l2_reg * np.sum(layer.weights**2)
         loss += reg_loss
 
-        # 交叉熵损失
+        # 计算交叉熵损失对模型输出的梯度
         dscores = scores.copy()
         dscores[range(num_train), y] -= 1
         dscores /= num_train
