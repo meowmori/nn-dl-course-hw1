@@ -47,11 +47,11 @@ $ y = xW + b $
 1. 从输出层开始，计算损失对输出的梯度。
 2. 依次向前传播梯度，更新每一层的权重和偏置。
 
-权重梯度： $$ \frac{\partial L}{\partial W} = x^T \cdot grad_\text{out} $$ 
+权重梯度： $\frac{\partial L}{\partial W} = x^T \cdot grad_\text{out}$ 
 
 其中，$ grad_\text{output} $ 是损失对输出 y 的梯度，形状为 $ (N, D_{out}) $。
 
-偏置梯度： $ \frac{\partial L}{\partial b} = \sum_{i=1}^N grad_\text{out}[i] $\
+偏置梯度： $ \frac{\partial L}{\partial b} = \sum_{i=1}^N grad_\text{out}[i] $
 
 输入梯度： $ \frac{\partial L}{\partial x} = grad_\text{out} \cdot W^T $
 
